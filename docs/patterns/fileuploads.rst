@@ -55,8 +55,8 @@ the file and redirects the user to the URL for the uploaded file::
                 flash('No file part')
                 return redirect(request.url)
             file = request.files['file']
-            # if user does not select file, browser also
-            # submit an empty part without filename
+            # if the user does not select any file,
+            # browser submits an empty part without filename
             if file.filename == '':
                 flash('No selected file')
                 return redirect(request.url)
